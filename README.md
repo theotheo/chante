@@ -1,5 +1,5 @@
 # Chante 
-## A small Chante wedding gift 👰
+## A Chante wedding small gift 👰
 
 ## Usage
 
