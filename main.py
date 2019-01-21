@@ -27,17 +27,17 @@ def tts_in_all_languages(word):
     p = Path(word)
     p.mkdir(exist_ok=True)
 
-    # for code, name in langs.items():
-    #     logging.debug(code, name)
-    #     name = slugify(name)
+    for code, name in langs.items():
+        logging.debug(code, name)
+        name = slugify(name)
 
-    #     tts = gTTS(name, lang='en')
-    #     fn = str(p.joinpath('{}___{}.mp3'.format(code, name)))
-    #     tts.save(fn)
+        tts = gTTS(name, lang='en')
+        fn = str(p.joinpath('{}___{}.mp3'.format(code, name)))
+        tts.save(fn)
 
-    #     tts = gTTS(word, lang=code, slow=True)
-    #     fn = str(p.joinpath('{}_{}.mp3'.format(code, word)))
-    #     tts.save(fn)
+        tts = gTTS(word, lang=code, slow=True)
+        fn = str(p.joinpath('{}_{}.mp3'.format(code, word)))
+        tts.save(fn)
 
 
     playlist = AudioSegment.silent(duration=500) 
